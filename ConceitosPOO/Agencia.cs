@@ -8,29 +8,37 @@ namespace ConceitosPOO
 {
     public class Agencia
     {
+        private int _numero;
         private string _nome;
         private string _telefone;
-        private string _numero;
-
-        public string Numero
+        public string Nome
         {
-            get
-            {
-                return _numero;
-            }
+            get => _nome;
             set
             {
-                if (value.Length > 3)
-                {
-                    _numero = value;
-                }
-                else
-                {
-                    throw new Exception("O campo deve conter mais de 3 caracteres");
-                }
+                _nome = value;
             }
+        }
+        public string Telefone
+        {
+            get => _telefone;
+            set
+            {
+                _telefone = value;
+            }
+        }
+        public int Numero
+        {
+            get => _numero;
+            private set
+            {
+                _numero = value;
+            }
+        }
+        public Agencia(int numero)
+        {
+            _numero = numero;
         }
 
     }
-
 }

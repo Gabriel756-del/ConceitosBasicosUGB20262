@@ -10,7 +10,7 @@ namespace ConceitosPOO
     {
         private string _nome;
         private string _cpf;
-        
+
         public string Nome
         {
             get // pegar o valor
@@ -31,19 +31,25 @@ namespace ConceitosPOO
             }
         }
 
-        public string Cpf {
+        public string Cpf
+        {
             get => _cpf;
             set
             {
-                if (value.Length == 11) { 
-                    _cpf = value; 
+                if (value.Length == 11)
+                {
+                    _cpf = value;
                 }
                 else
                 {
                     throw new Exception("Não tem 11 caracteres");
                 }
-            } 
-        }        
-              
+            }
+        }
+        public Cliente(string nome, string cpf)
+        {
+            _nome = nome;
+            _cpf = cpf;
+        }
     }
 }
