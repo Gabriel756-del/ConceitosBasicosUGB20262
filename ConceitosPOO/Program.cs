@@ -26,9 +26,12 @@ Conta conta = new Conta(numero, saldoInicial);
 Console.WriteLine($"A conta número {conta.Numero}, possui saldo {conta.Saldo}");
 //depositar 1000 na conta
 conta.Deposito(1000);
+Console.WriteLine($"A conta número {conta.Numero} possui saldo de {conta.Saldo} após depósito");
 //exibir saldo
 Console.WriteLine($"A conta número {conta.Numero} possui saldo {conta.Saldo}");
 //sacar 500 da conta
 conta.Saque(500);
-//exibir saldo
-Console.WriteLine($"A conta número {conta.Numero}, possui saldo {conta.Saldo}");
+Console.WriteLine($"A conta a {conta.Numero}, possui após o valor de: {conta.Saldo} após saque");
+//transferir 200 da conta
+conta.Transferir(200);
+Console.WriteLine($"A conta número {conta.Numero}, possui saldo de {conta.Saldo} após transferência");

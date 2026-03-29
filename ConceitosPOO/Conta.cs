@@ -30,10 +30,26 @@ namespace ConceitosPOO
         {
             _saldo += valor;
         }
-        public void Saque(decimal valor) 
+        public void Saque(decimal valor)
         {
+            if (Saldo < valor)
+            {
+                Console.WriteLine("Saldo Insuficiente para realizar o saque");
+                return;
+            }
+
             _saldo -= valor;
-            
+        }
+       
+        public void Transferir(decimal valor)
+        {
+            if (Saldo < valor)
+            {
+                Console.WriteLine("Saldo Insuficiente para realizar a transferência");
+                return;
+            }
+
+            _saldo -= valor;
         }
     }
 }
